@@ -132,15 +132,16 @@
 
   
 
-  <link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix/>
-</body>
+<link rel="stylesheet" href="html5/data/css/output.min.css" data-noprefix/>
+<script>
+document.body.addEventListener("touchstart", function () {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen().catch(()=>{});
+  }
+}, { once: true });
+</script>
+
 <script src="html5/lib/scripts/bootstrapper.min.js"></script>
+</body>
 </html>
 
-<script>
-  document.addEventListener("click", function () {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(()=>{});
-    }
-  });
-</script>
