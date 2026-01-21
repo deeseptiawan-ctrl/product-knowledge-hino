@@ -136,3 +136,11 @@
 </body>
 <script src="html5/lib/scripts/bootstrapper.min.js"></script>
 </html>
+
+<script>
+  document.addEventListener("click", function () {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(()=>{});
+    }
+  });
+</script>
